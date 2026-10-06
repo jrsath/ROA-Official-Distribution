@@ -6,8 +6,10 @@ Windows x64 engineering preview. Includes the .NET desktop runtime and the autho
 
 - ROA-Setup.zip: extract and run RecloserOptimisation-Setup.exe. Installation to Program Files needs administrator permission.
 - usb.zip: extract the entire archive into a writable USB folder and run RecloserOptimisation.exe. Keep portable.roa beside it; work is stored under Data on that drive.
-- Guest has no password. Reports, Outages and Optimization pages remain accessible; input storage is protected within the UI.
-- No private account, password, recovery credential, prior study results or crash dump is bundled. Local JSON is not encrypted or tamper-proof.
+- Guest has no password. Reports, Outages and Optimization pages remain accessible; input storage is read-only within the UI.
+- The package includes a KC_Test model (46,694 nodes, 41,519 edges), processed network files, and 5,982 matched outage records. A first launch loads them automatically, including when an older empty Guest folder exists. Existing Guest models are not overwritten.
+- No private account, password, recovery credential, prior study results or crash dump is bundled. Source workbook names, comments and original outage asset identifiers are removed from the public outage extract.
+- This is an offline, password-free Guest dataset. Anyone who downloads the package can extract and read its model and outage data outside the app. It cannot be made confidential while remaining available to an offline Guest account; use authenticated server delivery for confidential datasets.
 - Hourly recovery replaces its previous copy. Save manually between autosaves. Originals are retained when saving edits as a new model.
 
 This update keeps physical and electrical networks separate and includes the current provisional 11/33 kV planning case as a sanitised Guest demonstration. Its electrical graph assigns the recorded customers to supply paths and supports full and feeder-scope optimisation. Station terminals, missing sections, open points, customer counts, protection settings and fault rates remain assumptions requiring engineering review. The geographic coordinates have not been moved to conceal those gaps.
